@@ -186,7 +186,31 @@ students = [
     { 
         "name": "Zack",
         "city": "Los Angeles"
-    }
+    },
+     { 
+        "name": "John",
+        "city": "Atlanta"
+    },
+    { 
+        "name": "Jane",
+        "city": "New York"
+    },
+    { 
+        "name": "Rob",
+        "city": "Los Angeles"
+    },
+     { 
+        "name": "Harper",
+        "city": "Washington"
+    },
+    { 
+        "name": "Mike",
+        "city": "Seattle"
+    },
+    { 
+        "name": "Set",
+        "city": "San Francisco"
+    },
 ]
 
 for i in range(len(students)):
@@ -280,3 +304,31 @@ def pokemon(name, level=1, type='water'):
 pokemon("squirtle")
 pokemon("blastoise", level=55)
 pokemon("charizard", level=76, type="fire")
+
+def get_cities(students):
+    '''return a [list] of all cities from the students list'''
+    #TODO make a empty list
+    #TODO iterate through the list of students
+    #TODO append each city in the dict to the empty list
+    #TODO return the list
+
+    result = []
+
+    for s in students:
+        if s.get('city'):
+            result.append(s.get('city'))
+    
+    return result
+
+print('Cities list: ', get_cities(students))
+
+def get_names(students):
+    names = []
+    for n in students:
+        print(n)
+        if n.get('name'):
+            print(n.get('name'))
+            names.append(n.get('name'))
+    return names
+
+print('names list: ', get_names(students))
