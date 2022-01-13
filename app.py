@@ -270,3 +270,13 @@ result5 = filter(lambda x: x % 2 != 0, seq)
 # result contains even numbers of the list
 result6 = filter(lambda x: x % 2 == 0, seq)
 # print(list(result6)) # [0, 2, 8]
+
+
+def pokemon(name, level=1, type='water'):
+    msg = "{} is a level {}, {} type"
+    msg = msg.format(name, level, type)
+    print(msg)
+
+pokemon("squirtle")
+pokemon("blastoise", level=55)
+pokemon("charizard", level=76, type="fire")
